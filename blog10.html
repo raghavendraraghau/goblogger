@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<body>
+<div id="face" align="center">
+<input id="myP" align="left"></input>
+
+<select onchange="myFunction(this);" size="4">
+  <option>large</option>
+  <option>x-large</option>
+  <option>100%</option>
+  <option>250%</option>
+</select>
+ 
+
+
+<select onchange="myFunction(this);" size="2">
+  <option>normal</option>
+  <option>italic</option>
+</select></br></br>
+<textarea rows="100" cols="150"></textarea>
+<style>
+    /* Image Designing Propoerties */
+    .thumb {
+        height: 75px;
+        border: 1px solid #000;
+        margin: 10px 5px 0 0;
+    }
+</style>
+
+<script type="text/javascript">
+    /* The uploader form */
+    $(function () {
+        $(":file").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = imageIsLoaded;
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+
+    function imageIsLoaded(e) {
+        $('#myImg').attr('src', e.target.result);
+        $('#yourImage').attr('src', e.target.result);
+    };
+
+</script>
+
+
+<input type='file' />
+</br><img id="myImg" src="#" alt="your image" height=200 width=100>
+<script>
+
+function myFunction(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("myP").style.fontSize = listValue;
+    document.getElementById("myP").style.fontStyle = listValue;
+}
+</script>
+</div>
+</body>
+</html>
+

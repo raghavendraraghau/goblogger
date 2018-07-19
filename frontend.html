@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+</head>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: verdana;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+}
+</style>
+<body>
+<button class="tablink" onclick="openPage('Blog 1', this, 'red')" id="defaultOpen">Blog 1</button>
+<button class="tablink" onclick="openPage('Blog 2', this, 'green')" >Blog 2</button>
+<button class="tablink" onclick="openPage('Blog 3', this, 'blue')">Blog 3</button>
+<button class="tablink" onclick="openPage('Blog 4', this, 'orange')">Blog 4</button>
+
+
+<div id="Blog 1" class="tabcontent">
+ <body>
+<div id="face" align="center">
+<input id="myA" align="left"></input>
+
+<select onchange="myFunction(this);" size="4">
+   <option>100%</option>
+  <option>large</option>
+ 
+  <option>x-large</option>
+  <option>250%</option>
+</select>
+ 
+
+
+<select onchange="myFunction(this);" size="2">
+  <option>normal</option>
+  <option>italic</option>
+</select></br></br>
+<div id="blog">
+<textarea rows="100" cols="150" style="font-size: 24pt"></textarea>
+<script>
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+  </div>
+
+function myFunction(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("myA").style.fontSize = listValue;
+    document.getElementById("myA").style.fontStyle = listValue;
+}
+</script>
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+</div>
+</body>
+</div>
+
+<div id="Blog 2" class="tabcontent">
+ <body>
+<div id="face" align="center">
+<input id="myW" align="left"></input>
+
+<select onchange="myFunction(this);" size="4">
+   <option>100%</option>
+  <option>large</option>
+ 
+  <option>x-large</option>
+  <option>250%</option>
+</select>
+ 
+
+
+<select onchange="myFunction(this);" size="2">
+  <option>normal</option>
+  <option>italic</option>
+</select></br></br>
+<textarea rows="100" cols="150" style="font-size: 24pt"></textarea>
+<script>
+
+function myFunction(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("myW").style.fontSize = listValue;
+    document.getElementById("myW").style.fontStyle = listValue;
+}
+</script>
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+</div>
+</body>
+</div>
+
+<div id="Blog 3" class="tabcontent">
+  <body>
+<div id="face" align="center">
+<input id="myE" align="left"></input>
+
+<select onchange="myFunction(this);" size="4">
+   <option>100%</option>
+  <option>large</option>
+ 
+  <option>x-large</option>
+  <option>250%</option>
+</select>
+ 
+
+
+<select onchange="myFunction(this);" size="3">
+  <option>normal</option>
+  <option>italic <option>
+  
+</select></br></br>
+<textarea rows="100" cols="150" style="font-size: 24pt" ></textarea>
+<script>
+<div contenteditable="true" class="textEditor">Some random text.</div>
+
+<a href="#" class="embolden">Bold</a>
+$('.embolden').click(function(){
+    var highlight = window.getSelection();  
+    var span = '<span class="bold">' + highlight + '</span>';
+    var text = $('.textEditor').html();
+    $('.textEditor').html(text.replace(highlight, span));
+});
+
+function myFunction(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("myE").style.fontSize = listValue;
+    document.getElementById("myE").style.fontStyle = listValue;
+}
+</script>
+<input type="file" onchange="previewFile()"><br>
+<img src="" height="200" alt="Image preview...">
+<script>
+   function previewFile(){
+       var preview = document.querySelector('img'); //selects the query named img
+       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+       var reader  = new FileReader();
+
+       reader.onloadend = function () {
+           preview.src = reader.result;
+       }
+
+       if (file) {
+           reader.readAsDataURL(file); //reads the data as a URL
+       } else {
+           preview.src = "";
+       }
+  }
+
+  previewFile();  //calls the function named previewFile()
+  </script>
+</div>
+</body>
+</div>
+
+<div id="Blog 4" class="tabcontent">
+  <body>
+<div id="face" align="center">
+<input id="myR" align="left"></input>
+
+<select onchange="myFunction(this);" size="4">
+   <option>100%</option>
+  <option>large</option>
+ 
+  <option>x-large</option>
+  <option>250%</option>
+</select>
+
+</select></br></br>
+ 
+
+
+<select onchange="myFunction(this);" size="2">
+  <option>normal</option>
+  <option>italic</option></select></br></br>
+   <style> 
+    body {
+      font: 400 16px/1.4 'serif';
+      }
+    #editor1 {
+      border: 3px inset grey;
+      height: 100px;
+      width: 381px;
+      margin: 10px auto 0;
+     }
+    fieldset {
+      margin: 2px auto 15px;
+      width: 358px;
+    }
+    button {
+      width: 5ex;
+      text-align: center;
+      padding: 1px 3px;
+    }
+    </style>
+   <fieldset>
+    <button class="fontStyle"  name="textarea" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"><i>I</i>
+    </button>
+    <button class="fontStyle" name="textarea" onclick="document.execCommand( 'bold',false,null);" title="Bold Highlighted Text"><b>B</b>
+    </button>
+    <button class="fontStyle" name="textarea" onclick="document.execCommand( 'underline',false,null);"><u>U</u>
+    </button>
+  </fieldset>
+<input type="Radio" name="textarea" onClick="black();">Black</input><br/>
+<input type="Radio" name="textarea" onClick="Grey();">Grey<br/>
+<input type="Radio" name="textarea" onClick="Red();">Red<br/>
+<input type="Radio" name="textarea" onClick="temp();">temp<br/>
+<textarea id="textarea"rows="100" cols="90" style="font-size: 24pt"></textarea>
+ 
+<body>
+
+<input class="file" type='file' id="imgSel" />
+
+<div id="textarea" contenteditable>
+
+  <img contenteditable="false" style="width:450px" id="myimg" />
+
+
+</div>
+
+<script type="text/javascript">
+
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                document.getElementById('myimg').setAttribute('src',e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    document.getElementById('imgSel').onchange = function () { //set up a common class
+        readURL(this);
+    };
+
+
+</script>
+<script>
+
+function black() {
+    document.getElementById("textarea").style.color="#000000";
+}
+    function Grey() {
+    document.getElementById("textarea").style.color="#808080";
+}
+function Red() {
+    document.getElementById("textarea").style.color="#FF0000";
+}
+function temp() {
+    document.getElementById("textarea").style.color="#00FF00";
+}
+
+</script>
+
+<script>
+
+
+function myFunction(selectTag) {
+    var listValue = selectTag.options[selectTag.selectedIndex].text;
+    document.getElementById("myR").style.fontSize = listValue;
+    document.getElementById("myR").style.fontStyle = listValue;
+}
+</script>
+
+</div>
+</body>
+</div>
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+</body>
+</html>
+
